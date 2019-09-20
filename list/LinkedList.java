@@ -82,6 +82,22 @@ public class LinkedList<T> implements Iterable<T> {
 		return new LinkedListIterator<T>(this.head);
 	}
 	
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("[");
+		if(this.size>0) {
+			LLNode<T> cur = this.head;
+			while(cur.getNext() != null) {
+				sb.append(cur.getValue());
+				sb.append(", ");
+				cur = cur.getNext();
+			}
+			sb.append(cur.getValue());
+		}
+		sb.append("]");
+		return sb.toString();
+	}
 }
 
 
