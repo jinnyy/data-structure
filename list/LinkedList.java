@@ -77,6 +77,10 @@ public class LinkedList<T> implements Iterable<T> {
 		this.size = 0;
 	}
 	
+	void print() {
+		System.out.println(this.toString());
+	}
+	
 	@Override
 	public Iterator<T> iterator() {
 		return new LinkedListIterator<T>(this.head);
