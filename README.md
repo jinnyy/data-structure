@@ -3,12 +3,15 @@ implement data structures (in java)
 
 <br><br><br>
 
-# List
+# list
 * LinkedList
 * Stack
 * Queue
 
-# Sort
-* Bubble Sort
-* Selection Sort
-* Quick Sort
+# sort
+* Search
+  - Binary Search
+* Sort
+  - Bubble Sort
+  - Selection Sort
+  - Quick Sort
