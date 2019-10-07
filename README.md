@@ -8,3 +8,7 @@ implement data structures (in java)
 * Stack
 * Queue
 
+# Sort
+* Bubble Sort
+* Selection Sort
+* Quick Sort
