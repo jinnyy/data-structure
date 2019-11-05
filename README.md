@@ -15,3 +15,6 @@ implement data structures (in java)
   - Bubble Sort
   - Selection Sort
   - Quick Sort
+
+# tree
+* Binary Search Tree
