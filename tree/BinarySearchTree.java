@@ -21,8 +21,8 @@ public class BinarySearchTree<T extends Number & Comparable<? super T>> {
 	}
 	
 	private boolean add(BSNode cur, T value) {
-		if(cur.value.equals(value)) return false;
-		if(cur.value.compareTo(value) < 0) {
+		if(cur.key.equals(value)) return false;
+		if(cur.key.compareTo(value) < 0) {
 			if(cur.right == null) cur.right = new BSNode(value);
 			else add(cur.right, value);
 		} else {
@@ -31,15 +31,48 @@ public class BinarySearchTree<T extends Number & Comparable<? super T>> {
 		}
 		return true;
 	}
-
+	
+	
+	public void delete(T key) {
+		this.root = delete(this.root, key);
+	}
+	
+	private BSNode delete(BSNode node, T key) {
+		if(node == null) return node;
+		
+		if(key.equals(node.key)) {
+			// has one child
+			if(node.left == null) return node.right;
+			if(node.right == null) return node.left;
+			
+			// has both chileren
+			node.key = findMin(node.right);
+			node.right = delete(node.right, node.key);
+		} else if(key.compareTo(node.key) < 0) {
+			node.left = delete(node.left, key);
+		} else {
+			node.right = delete(node.right, key);
+		}
+		
+		return node;
+	}
+	
+	T findMin(BSNode node) {
+		T min = node.key;
+		while(node.left != null) {
+			min = node.left.key;
+			node = node.left;
+		}
+		return min;
+	}
 	
 	
 	private class BSNode {
-		T value;
+		T key;
 		BSNode left, right;
 		
 		BSNode(T value) {
-			this.value = value;
+			this.key = value;
 		}
 	}
 }
