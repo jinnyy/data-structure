@@ -34,5 +34,5 @@ implement data structures (in java)
   - Selection Sort
   - Quick Sort
 
-## tree
+### tree
 * Binary Search Tree
