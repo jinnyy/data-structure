@@ -17,8 +17,7 @@ implement data structures (in java)
 
 <br><br><br>
 
-
-## Implemented Data Structures
+## :open_file_folder: Implemented Data Structures
 
 
 ### list
